@@ -4,7 +4,7 @@ import PokemonCard from "./Components/PokemonCard";
 function App() {
   const pokemonList = [
     {
-      name:  "bulbasaur",
+      name:  "bulbasaur", // "bulbasaur"
       imgSrc:
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
     },
