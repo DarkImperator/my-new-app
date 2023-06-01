@@ -1,3 +1,4 @@
+import './App.css';
 import PokemonCard from "./Components/PokemonCard";
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
   return (
     <>
       <div>
-        { <PokemonCard pokemonList={pokemonList[0]}/> }
+        { <PokemonCard pokemon={pokemonList[0]}/> }
       </div>
     </>
   )
