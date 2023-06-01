@@ -1,11 +1,9 @@
-function PokemonImag () {
+const PokemonCard = () => {
   return (
-    // <div>
-      <figure>
-        <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="bulbasaur"></img>
-        <figcaption>bulbasaur</figcaption>
-      </figure>
-    // </div>
-    );
+    <figure>
+      <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="bulbasaur"></img>
+      <figcaption>bulbasaur</figcaption>
+    </figure>
+  );
 }
-export default PokemonImag;
+export default PokemonCard;

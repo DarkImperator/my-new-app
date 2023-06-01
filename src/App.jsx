@@ -1,11 +1,9 @@
-import PokemonImag from './Components/PokemonCard'
+import PokemonCard from './Components/PokemonCard'
 
 function App() {
   return (
     <>
-      <div>
-        <PokemonImag />
-      </div>
+    <PokemonCard />
     </>
   )
 }
