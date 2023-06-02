@@ -1,21 +1,23 @@
+import { object } from 'prop-types';
 import './NavBar.css';
-import { useState } from "react";
-import PropTypes from "prop-types";
+import PokemonCard from './PokemonCard';
 
-function NavBar ({setPokemonIndex, pokemonIndex, pokemonList}) {
-  const handleClickS = () => (pokemonIndex < pokemonList.length - 1) ? setPokemonIndex(pokemonIndex + 1) : null
-  const handleClickP = () => (pokemonIndex > 0) ? setPokemonIndex(pokemonIndex - 1) : null
-
-  // function NavBar (props) {            ==> methode structurée avec props.
-  // const {pokemonIndex, pokemonList, setPokemonIndex} = props;
+function NavBar ({setPokemonName, pokemonName, pokemonList}) {
   // const handleClickS = () => (pokemonIndex < pokemonList.length - 1) ? setPokemonIndex(pokemonIndex + 1) : null
   // const handleClickP = () => (pokemonIndex > 0) ? setPokemonIndex(pokemonIndex - 1) : null
 
+  const handleClick = (e) => {
+    setPokemonName(e.target.innerHTML)
+  }
+    
+  
 return (
     <>
       <div>
-        <button onClick={handleClickP}>Précedent</button>
-        <button onClick={handleClickS}>Suivant</button>
+      
+      {pokemonList.map(pokemon => (
+        <button onClick={handleClick}>{pokemon.name}</button>
+      ))  }
       </div>
     </>
   )

@@ -32,12 +32,13 @@ function App() {
   ];
 
   const [pokemonIndex, setPokemonIndex] = useState(0);
-
+  const [pokemonName, setPokemonName] = useState(pokemonList[0].name);
+  const pokemonAAfficher = pokemonList.find(pokemon => pokemon.name === pokemonName);
   return (
     <>
       <div>
-        <PokemonCard pokemon={pokemonList[pokemonIndex]}/>
-        <NavBar pokemonIndex={pokemonIndex} setPokemonIndex={setPokemonIndex} pokemonList={pokemonList} />
+        <PokemonCard pokemon={pokemonAAfficher}/>
+        <NavBar pokemonName={pokemonName} setPokemonName={setPokemonName} pokemonList={pokemonList} />
       </div>
     </>
   )
